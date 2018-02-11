@@ -4,8 +4,12 @@ import '../stylesheets/app.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 // Import libraries we need.
-import { default as Web3 } from 'web3'
-import { default as contract } from 'truffle-contract'
+import {
+  default as Web3
+} from 'web3'
+import {
+  default as contract
+} from 'truffle-contract'
 
 // Import our contract artifacts and turn them into usable abstractions.
 import cryptoValentineArtifacts from '../../build/contracts/CryptoValentine.json'
@@ -17,7 +21,7 @@ var CryptoValentine = contract(cryptoValentineArtifacts)
 // As your needs grow you will likely need to change its form and structure.
 // For application bootstrapping, check out window.addEventListener below.
 var accounts
-var account 
+var account
 
 window.App = {
   start: function () {
@@ -50,7 +54,11 @@ window.App = {
 
     CryptoValentine.deployed().then(function (instance) {
       console.log("test")
-      return instance.setText(_message)
+      return instance.setText(_message, {
+        from: accounts[0],
+        gas: 4000000,
+        amount: 0.002
+      })
     }).then(function (result) {
       console.log(result)
     }).catch(function (err) {
