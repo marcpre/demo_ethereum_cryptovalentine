@@ -1,12 +1,14 @@
 // Import the page's CSS. Webpack will know what to do with it.
-import '../stylesheets/app.css';
+import '../stylesheets/app.css'
+
+import 'bootstrap/dist/css/bootstrap.css'
 
 // Import libraries we need.
 import { default as Web3 } from 'web3'
 import { default as contract } from 'truffle-contract'
 
 // Import our contract artifacts and turn them into usable abstractions.
-import cryptoValentineArtifacts from '../../build/contracts/CryptoValentine.sol.json'
+import cryptoValentineArtifacts from '../../build/contracts/CryptoValentine.json'
 
 // MetaCoin is our usable abstraction, which we'll use through the code below.
 var CryptoValentine = contract(cryptoValentineArtifacts)
@@ -15,7 +17,7 @@ var CryptoValentine = contract(cryptoValentineArtifacts)
 // As your needs grow you will likely need to change its form and structure.
 // For application bootstrapping, check out window.addEventListener below.
 var accounts
-var account
+var account 
 
 window.App = {
   start: function () {
@@ -28,61 +30,36 @@ window.App = {
     web3.eth.getAccounts(function (err, accs) {
       if (err != null) {
         alert('There was an error fetching your accounts.')
-        return;
+        return
       }
 
       if (accs.length == 0) {
         alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.")
-        return;
+        return
       }
 
       accounts = accs
       account = accounts[0]
 
-      self.refreshBalance()
+      App.sendMessage()
     })
   },
 
-  setStatus: function (message) {
-    var status = document.getElementById('status')
-    status.innerHTML = message
-  },
+  sendMessage: function () {
+    var _message = document.getElementById('message').value
 
-  refreshBalance: function () {
-    var self = this
-
-    var meta
     CryptoValentine.deployed().then(function (instance) {
-      meta = instance
-      return meta.getBalance.call(account, { from: account })
-    }).then(function (value) {
-      var balance_element = document.getElementById('balance')
-      balance_element.innerHTML = value.valueOf()
-    }).catch(function (e) {
-      console.log(e)
-      self.setStatus('Error getting balance; see log.')
+      console.log("test")
+      return instance.setText(_message)
+    }).then(function (result) {
+      console.log(result)
+    }).catch(function (err) {
+      console.error(err)
     })
   },
 
   sendCoin: function () {
     var self = this
-
-    var amount = parseInt(document.getElementById('amount').value)
-    var receiver = document.getElementById('receiver').value
-
-    this.setStatus('Initiating transaction... (please wait)')
-
-    var meta
-    MetaCoin.deployed().then(function (instance) {
-      meta = instance
-      return meta.sendCoin(receiver, amount, { from: account })
-    }).then(function () {
-      self.setStatus('Transaction complete!')
-      self.refreshBalance()
-    }).catch(function (e) {
-      console.log(e)
-      self.setStatus('Error sending coin; see log.')
-    })
   }
 }
 
