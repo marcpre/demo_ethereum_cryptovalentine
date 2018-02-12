@@ -1,5 +1,5 @@
 {
-  "name": "demo_ethereum_multisignaturewallet",
+  "name": "demo_ethereum_cryptovalentine",
   "version": "",
   "description": "",
   "scripts": {
@@ -33,6 +33,7 @@
     "postcss-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.1",
+    "truffle": "^4.0.6",
     "truffle-contract": "^1.1.11",
     "url-loader": "^0.6.2",
     "web3": "^0.20.0",
