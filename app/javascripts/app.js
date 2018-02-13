@@ -26,7 +26,7 @@ var account
 window.App = {
   start: function () {
     var self = this
-
+    console.log("app.js started");
     // Bootstrap the MetaCoin abstraction for Use.
     CryptoValentine.setProvider(web3.currentProvider)
 
@@ -45,10 +45,10 @@ window.App = {
       accounts = accs
       account = accounts[0]
 
-      App.sendMessage()
+      //App.sendMessage()
+      App.getLocks();
     })
   },
-
   sendMessage: function () {
     var _message = document.getElementById('message').value
 
@@ -65,7 +65,15 @@ window.App = {
       console.error(err)
     })
   },
-
+  getLocks() {
+    CryptoValentine.deployed().then(function (instance) {
+      console.log("test")
+        instance.getLoveLocks().then((data)=>{
+          let messages = data[0];
+          console.log(messages)
+        })
+      })
+  },
   sendCoin: function () {
     var self = this
   }

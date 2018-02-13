@@ -5,10 +5,16 @@
   <title>Crypto-Valentine</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./app.js"></script>
 </head>
 
 <body>
+  <script>
+    $( "#lock" ).click(function() {
+      alert( "Hello World jQuery" );
+    });
+  </script>
 
   <div>
     <form onsubmit="App.sendMessage(); return false;">
@@ -34,10 +40,23 @@
             </div>
           </div>
 -->
+        <!--
         <div class="form-group">
           <label class="col-md-4 control-label" for="textarea"></label>
           <div class="col-md-4">
-            <textarea class="form-control" id="message" name="textarea">Write down your valentine's message.</textarea>
+            <textarea class="form-control" id="fromUser" name="textarea">You</textarea>
+          </div>
+        -->
+          <!--
+          <div class="col-md-4">
+            <textarea class="form-control" id="toUser" name="textarea">Your Love</textarea>
+          </div>
+        -->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textarea"></label>
+          <div class="col-md-4">
+            <textarea class="form-control" id="message" name="textarea">Write down a message.</textarea>
           </div>
         </div>
 
@@ -52,7 +71,7 @@
     <div class="swag">
       <div class="chain">
         <div class="links left">
-          <div class="link">
+          <div class="link" onclick="test()">
             <div class="lock"></div>
           </div>
           <div class="link"></div>
@@ -109,6 +128,13 @@
       </div>
     </div>
   </div>
+
+<script>
+  function test() {
+    alert("you clicked on the first lock")
+  } 
+</script>
+
 </body>
 
 </html>

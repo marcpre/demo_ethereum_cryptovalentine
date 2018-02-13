@@ -2,11 +2,7 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?https://0.0.0.0:8080',
-    'webpack/hot/dev-server',
-    './app/javascripts/app.js'
-  ],
+  entry: './app/javascripts/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.js'
