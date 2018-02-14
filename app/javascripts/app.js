@@ -1,6 +1,5 @@
 // Import the page's CSS. Webpack will know what to do with it.
 import '../stylesheets/app.css'
-
 import 'bootstrap/dist/css/bootstrap.css'
 
 // Import libraries we need.
@@ -46,7 +45,9 @@ window.App = {
       account = accounts[0]
 
       //App.sendMessage()
+      App.getNumberOfLocks();
       App.getLocks();
+
     })
   },
   sendMessage: function () {
@@ -65,18 +66,43 @@ window.App = {
       console.error(err)
     })
   },
-  getLocks() {
+  getNumberOfLocks: function ()  {
+    CryptoValentine.deployed().then(function (instance) {
+      console.log("haha");
+      console.log(instance.getNumberOfLoveLocks());
+    })
+  },
+  getLocks: function () {
     CryptoValentine.deployed().then(function (instance) {
       console.log("test")
-        instance.getLoveLocks().then((data)=>{
-          let messages = data[0];
-          console.log(messages)
-        })
+      console.log(instance.getLoveLocks())
+      /*let messages = instance.getLoveLocks();
+      messages.map((item,index)=>{
+        messages[index] = cleanStr(web3.toAscii(item));
       })
+      return messages;*/
+
+      return instance.getLoveLocks()
+      /*
+      instance.getLoveLocks().then((data)=>{
+        let messages = data[0];
+        console.log(messages)
+      })*/
+    }).then(function (result) {
+      console.log(result)
+    }).catch(function (err) {
+      console.error(err)
+    })
   },
   sendCoin: function () {
     var self = this
-  }
+  }/*,
+  render() {
+  
+    return (
+        <h1> TEstsdftsdtftsdftsdftsdttfds </h1>  
+    );
+  }*/
 }
 
 window.addEventListener('load', function () {
@@ -93,3 +119,5 @@ window.addEventListener('load', function () {
 
   App.start()
 })
+
+

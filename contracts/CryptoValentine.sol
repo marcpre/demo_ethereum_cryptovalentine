@@ -29,7 +29,11 @@ contract CryptoValentine {
         }
     }
 
-     function getLoveLocks() public constant returns (bytes32[]) {
+    function getNumberOfLoveLocks() public constant returns (uint) {
+        return (loveLocks.length);
+    }
+
+    function getLoveLocks() public constant returns (bytes32[]) {
         uint length = loveLocks.length;
         bytes32[] memory messages = new bytes32[](length);
 
@@ -41,7 +45,7 @@ contract CryptoValentine {
             messages[i] = currentLoveLock.message;
         }
         return (messages);
-     }
+    }
 
     function withdrawEther() external {
         require(msg.sender == owner);

@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app/javascripts/app.js"
+        },
+        {
+            "name": "Launch via NPM",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "npm",
+            "program": "${workspaceFolder}/app/javascripts/app.js",
+            "runtimeArgs": [
+                "run", "dev"
+            ],
+            "port": 8080,
+            "sourceMaps": true,
+            "protocol": "inspector"
+        },
+        {
+            "name": "Attach To npm",
+            "type": "node",
+            "request": "attach",
+            "port": 8080,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": false,
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": null
+        }
+    ]
+}
