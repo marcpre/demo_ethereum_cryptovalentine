@@ -64,7 +64,7 @@
       "outputs": [
         {
           "name": "",
-          "type": "string"
+          "type": "bytes32"
         }
       ],
       "payable": false,
@@ -75,6 +75,61 @@
       "payable": true,
       "stateMutability": "payable",
       "type": "fallback"
+<<<<<<< HEAD
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newText",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setText",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLoveLocks",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawEther",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052600080557f577269746520646f776e20796f7572206d65737361676521000000000000000060019060001916905533600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020600355341561008357600080fd5b610565806100926000396000f300606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636886bf1c146100a45780637362377b146100cd5780638da5cb5b146100e2578063919ad6df1461013757806395980858146101a1578063ceb45f58146101d2575b6100a17f44656661756c7420746578742100000000000000000000000000000000000000610206565b50005b34156100af57600080fd5b6100b76102df565b6040518082815260200191505060405180910390f35b34156100d857600080fd5b6100e06102e5565b005b34156100ed57600080fd5b6100f56103bc565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014257600080fd5b61014a6103e2565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561018d578082015181840152602081019050610172565b505050509050019250505060405180910390f35b34156101ac57600080fd5b6101b46104b5565b60405180826000191660001916815260200191505060405180910390f35b6101ec600480803560001916906020019091905050610206565b604051808215151515815260200191505060405180910390f35b60006102106104bb565b600054341180156102265750600354602060ff16105b156102945782600181600019169055503460008190555082816000019060001916908160001916815250506004805480600101828161026591906104d2565b9160005260206000209001600083909190915060008201518160000190600019169055505050600191506102d9565b3373ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156102d457600080fd5b600091505b50919050565b60005481565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561034157600080fd5b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156103ba57600080fd5b565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103ea6104fe565b60006103f46104fe565b60006103fe6104bb565b6004805490509350836040518059106104145750595b90808252806020026020018201604052509250600091505b6004805490508210156104ab5760048281548110151561044857fe5b906000526020600020900160206040519081016040529081600082015460001916600019168152505090508060000151838381518110151561048657fe5b906020019060200201906000191690816000191681525050818060010192505061042c565b8294505050505090565b60015481565b602060405190810160405280600080191681525090565b8154818355818115116104f9578183600052602060002091820191016104f89190610512565b5b505050565b602060405190810160405280600081525090565b61053691905b808211156105325760008082016000905550600101610518565b5090565b905600a165627a7a7230582051da17d9a4722a1ffc7d76a2c378bdda060f145d96caab813aa088f388a5b58d0029",
+  "deployedBytecode": "0x606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636886bf1c146100a45780637362377b146100cd5780638da5cb5b146100e2578063919ad6df1461013757806395980858146101a1578063ceb45f58146101d2575b6100a17f44656661756c7420746578742100000000000000000000000000000000000000610206565b50005b34156100af57600080fd5b6100b76102df565b6040518082815260200191505060405180910390f35b34156100d857600080fd5b6100e06102e5565b005b34156100ed57600080fd5b6100f56103bc565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014257600080fd5b61014a6103e2565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561018d578082015181840152602081019050610172565b505050509050019250505060405180910390f35b34156101ac57600080fd5b6101b46104b5565b60405180826000191660001916815260200191505060405180910390f35b6101ec600480803560001916906020019091905050610206565b604051808215151515815260200191505060405180910390f35b60006102106104bb565b600054341180156102265750600354602060ff16105b156102945782600181600019169055503460008190555082816000019060001916908160001916815250506004805480600101828161026591906104d2565b9160005260206000209001600083909190915060008201518160000190600019169055505050600191506102d9565b3373ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156102d457600080fd5b600091505b50919050565b60005481565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561034157600080fd5b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156103ba57600080fd5b565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103ea6104fe565b60006103f46104fe565b60006103fe6104bb565b6004805490509350836040518059106104145750595b90808252806020026020018201604052509250600091505b6004805490508210156104ab5760048281548110151561044857fe5b906000526020600020900160206040519081016040529081600082015460001916600019168152505090508060000151838381518110151561048657fe5b906020019060200201906000191690816000191681525050818060010192505061042c565b8294505050505090565b60015481565b602060405190810160405280600080191681525090565b8154818355818115116104f9578183600052602060002091820191016104f89190610512565b5b505050565b602060405190810160405280600081525090565b61053691905b808211156105325760008082016000905550600101610518565b5090565b905600a165627a7a7230582051da17d9a4722a1ffc7d76a2c378bdda060f145d96caab813aa088f388a5b58d0029",
+  "sourceMap": "26:1538:0:-;;;80:1;57:24;;116:35;87:64;;;;;;;180:10;157:33;;;;;;;;;;;;;;;;;;;;221:2;196:27;;26:1538;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:1538:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1530:24;;:7;:24::i;:::-;;26:1538;57:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1370:117;;;;;;;;;;;;;;157:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;963:401;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;87:64:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;503:453;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;561:4;716:27;;:::i;:::-;593:8;;581:9;:20;:50;;;;;622:9;;605:14;:26;;;581:50;577:373;;;661:7;647:11;:21;;;;;;;693:9;682:8;:20;;;;779:7;757:11;:19;;:29;;;;;;;;;;;;;800:9;:27;;;;;;;;;;;:::i;:::-;;;;;;;;;;815:11;800:27;;;;;;;;;;;;;;;;;;;;;848:4;841:11;;;;577:373;883:10;:19;;:30;903:9;883:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;934:5;927:12;;503:453;;;;;:::o;57:24::-;;;;:::o;1370:117::-;1436:5;;;;;;;;;;;1422:19;;:10;:19;;;1414:28;;;;;;;;1452:5;;;;;;;;;;;:14;;:28;1467:4;:12;;;1452:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1370:117::o;157:33::-;;;;;;;;;;;;;:::o;963:401::-;1012:9;;:::i;:::-;1033:11;1073:25;;:::i;:::-;1138:6;1192:31;;:::i;:::-;1047:9;:16;;;;1033:30;;1115:6;1101:21;;;;;;;;;;;;;;;;;;;;;;;;1073:49;;1147:1;1138:10;;1133:197;1154:9;:16;;;;1150:1;:20;1133:197;;;1255:9;1265:1;1255:12;;;;;;;;;;;;;;;;;;1237:30;;;;;;;;;;;;;;;;;;;;;;;;;;1296:15;:23;;;1282:8;1291:1;1282:11;;;;;;;;;;;;;;;;;:37;;;;;;;;;;;;;1172:3;;;;;;;1133:197;;;1347:8;1339:17;;963:401;;;;;:::o;87:64::-;;;;:::o;26:1538::-;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\ncontract CryptoValentine {\n    uint public mostSent = 0;\n    bytes32 public currentText = bytes32(\"Write down your message!\");\n    address public owner = msg.sender;\n    uint private maxLength = 32;\n    \n    struct LoveLock {\n        // Array of strings not possible in Soldity \n        // need other option because bytes32 is just to short\n        // cut them in multiple bytes32 is possible but bad solution... \n        bytes32 message;\n    }\n\n    LoveLock[] loveLocks;\n\n    function setText(bytes32 newText) public payable returns (bool) {\n        if (msg.value > mostSent && newText.length < maxLength) {\n            currentText = newText;\n            mostSent = msg.value;\n            LoveLock memory newLoveLock;\n            newLoveLock.message = newText;\n            loveLocks.push(newLoveLock);\n            return true;\n        } else {\n            msg.sender.transfer(msg.value);\n            return false;\n        }\n    }\n\n     function getLoveLocks() public constant returns (bytes32[]) {\n        uint length = loveLocks.length;\n        bytes32[] memory messages = new bytes32[](length);\n\n        for (uint i = 0; i < loveLocks.length; i++) {\n\n            LoveLock memory currentLoveLock;\n            currentLoveLock = loveLocks[i];\n\n            messages[i] = currentLoveLock.message;\n        }\n        return (messages);\n     }\n\n    function withdrawEther() external {\n        require(msg.sender == owner);\n        owner.transfer(this.balance);\n    }\n\n    function () public payable {\n        setText(\"Default text!\");\n    }\n }\n",
+  "sourcePath": "/Users/Johannes/Documents/randomProjects/demo_ethereum_cryptovalentine/contracts/CryptoValentine.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/Johannes/Documents/randomProjects/demo_ethereum_cryptovalentine/contracts/CryptoValentine.sol",
+=======
     }
   ],
   "bytecode": "0x606060405260008055606060405190810160405280602181526020017f50757420796f7572206f776e2074657874206865726520666f72206d6f6e657981526020017f21000000000000000000000000000000000000000000000000000000000000008152506001908051906020019061007a9291906100d1565b5033600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603260035534156100cc57600080fd5b610176565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011257805160ff1916838001178555610140565b82800160010185558215610140579182015b8281111561013f578251825591602001919060010190610124565b5b50905061014d9190610151565b5090565b61017391905b8082111561016f576000816000905550600101610157565b5090565b90565b610535806101856000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635d3a1f9d146100ae5780636886bf1c146101185780637362377b146101415780638da5cb5b1461015657806395980858146101ab575b6100ab6040805190810160405280600d81526020017f44656661756c7420746578742100000000000000000000000000000000000000815250610239565b50005b6100fe600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610239565b604051808215151515815260200191505060405180910390f35b341561012357600080fd5b61012b6102c3565b6040518082815260200191505060405180910390f35b341561014c57600080fd5b6101546102c9565b005b341561016157600080fd5b6101696103a0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101b657600080fd5b6101be6103c6565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101fe5780820151818401526020810190506101e3565b50505050905090810190601f16801561022b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600080543411801561024d57506003548251105b15610279578160019080519060200190610268929190610464565b5034600081905550600190506102be565b3373ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156102b957600080fd5b600090505b919050565b60005481565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561032557600080fd5b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050151561039e57600080fd5b565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561045c5780601f106104315761010080835404028352916020019161045c565b820191906000526020600020905b81548152906001019060200180831161043f57829003601f168201915b505050505081565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104a557805160ff19168380011785556104d3565b828001600101855582156104d3579182015b828111156104d25782518255916020019190600101906104b7565b5b5090506104e091906104e4565b5090565b61050691905b808211156105025760008160009055506001016104ea565b5090565b905600a165627a7a723058200e2bec15bf1fdaeaba6072445e247a048236f35183e65b2b4d0de822a81bfacb0029",
@@ -86,9 +141,10 @@
   "ast": {
     "attributes": {
       "absolutePath": "/C/Users/marcus/Desktop/Coding Projects/demo_ethereum_cryptovalentine/contracts/CryptoValentine.sol",
+>>>>>>> upstream/master
       "exportedSymbols": {
         "CryptoValentine": [
-          85
+          160
         ]
       }
     },
@@ -118,17 +174,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            85
+            160
           ],
           "name": "CryptoValentine",
-          "scope": 86
+          "scope": 161
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "mostSent",
-              "scope": 85,
+              "scope": 160,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -170,49 +226,88 @@
             "attributes": {
               "constant": false,
               "name": "currentText",
-              "scope": 85,
+              "scope": 160,
               "stateVariable": true,
               "storageLocation": "default",
-              "type": "string storage ref",
+              "type": "bytes32",
               "visibility": "public"
             },
             "children": [
               {
                 "attributes": {
-                  "name": "string",
-                  "type": "string storage pointer"
+                  "name": "bytes32",
+                  "type": "bytes32"
                 },
                 "id": 5,
                 "name": "ElementaryTypeName",
-                "src": "87:6:0"
+                "src": "87:7:0"
               },
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "50757420796f7572206f776e2074657874206865726520666f72206d6f6e657921",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
+                  "isStructConstructorCall": false,
                   "lValueRequested": false,
-                  "subdenomination": null,
-                  "token": "string",
-                  "type": "literal_string \"Put your own text here for money!\"",
-                  "value": "Put your own text here for money!"
+                  "names": [
+                    null
+                  ],
+                  "type": "bytes32",
+                  "type_conversion": true
                 },
-                "id": 6,
-                "name": "Literal",
-                "src": "115:35:0"
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_e70d6a2bbd22eb4c9ce32a3e1f02b6b13bd757a89e5466e030002ebe5593a555",
+                          "typeString": "literal_string \"Write down your message!\""
+                        }
+                      ],
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "type": "type(bytes32)",
+                      "value": "bytes32"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeNameExpression",
+                    "src": "116:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "577269746520646f776e20796f7572206d65737361676521",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"Write down your message!\"",
+                      "value": "Write down your message!"
+                    },
+                    "id": 7,
+                    "name": "Literal",
+                    "src": "124:26:0"
+                  }
+                ],
+                "id": 8,
+                "name": "FunctionCall",
+                "src": "116:35:0"
               }
             ],
-            "id": 7,
+            "id": 9,
             "name": "VariableDeclaration",
-            "src": "87:63:0"
+            "src": "87:64:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "owner",
-              "scope": 85,
+              "scope": 160,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -224,9 +319,9 @@
                   "name": "address",
                   "type": "address"
                 },
-                "id": 8,
+                "id": 10,
                 "name": "ElementaryTypeName",
-                "src": "156:7:0"
+                "src": "157:7:0"
               },
               {
                 "attributes": {
@@ -246,29 +341,29 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 154,
+                      "referencedDeclaration": 172,
                       "type": "msg",
                       "value": "msg"
                     },
-                    "id": 9,
+                    "id": 11,
                     "name": "Identifier",
-                    "src": "179:3:0"
+                    "src": "180:3:0"
                   }
                 ],
-                "id": 10,
+                "id": 12,
                 "name": "MemberAccess",
-                "src": "179:10:0"
+                "src": "180:10:0"
               }
             ],
-            "id": 11,
+            "id": 13,
             "name": "VariableDeclaration",
-            "src": "156:33:0"
+            "src": "157:33:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "maxLength",
-              "scope": 85,
+              "scope": 160,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -280,31 +375,109 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 12,
+                "id": 14,
                 "name": "ElementaryTypeName",
-                "src": "195:4:0"
+                "src": "196:4:0"
               },
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "3530",
+                  "hexvalue": "3332",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "lValueRequested": false,
                   "subdenomination": null,
                   "token": "number",
-                  "type": "int_const 50",
-                  "value": "50"
+                  "type": "int_const 32",
+                  "value": "32"
                 },
-                "id": 13,
+                "id": 15,
                 "name": "Literal",
-                "src": "220:2:0"
+                "src": "221:2:0"
               }
             ],
-            "id": 14,
+            "id": 16,
             "name": "VariableDeclaration",
-            "src": "195:27:0"
+            "src": "196:27:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "CryptoValentine.LoveLock",
+              "name": "LoveLock",
+              "scope": 160,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "message",
+                  "scope": 19,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 17,
+                    "name": "ElementaryTypeName",
+                    "src": "448:7:0"
+                  }
+                ],
+                "id": 18,
+                "name": "VariableDeclaration",
+                "src": "448:15:0"
+              }
+            ],
+            "id": 19,
+            "name": "StructDefinition",
+            "src": "234:236:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "loveLocks",
+              "scope": 160,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct CryptoValentine.LoveLock storage ref[] storage ref",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct CryptoValentine.LoveLock storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "LoveLock",
+                      "referencedDeclaration": 19,
+                      "type": "struct CryptoValentine.LoveLock storage pointer"
+                    },
+                    "id": 20,
+                    "name": "UserDefinedTypeName",
+                    "src": "476:8:0"
+                  }
+                ],
+                "id": 21,
+                "name": "ArrayTypeName",
+                "src": "476:10:0"
+              }
+            ],
+            "id": 22,
+            "name": "VariableDeclaration",
+            "src": "476:20:0"
           },
           {
             "attributes": {
@@ -316,7 +489,7 @@
               ],
               "name": "setText",
               "payable": true,
-              "scope": 85,
+              "scope": 160,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
@@ -328,32 +501,32 @@
                     "attributes": {
                       "constant": false,
                       "name": "newText",
-                      "scope": 58,
+                      "scope": 79,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "string memory",
+                      "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "string",
-                          "type": "string storage pointer"
+                          "name": "bytes32",
+                          "type": "bytes32"
                         },
-                        "id": 15,
+                        "id": 23,
                         "name": "ElementaryTypeName",
-                        "src": "250:6:0"
+                        "src": "520:7:0"
                       }
                     ],
-                    "id": 16,
+                    "id": 24,
                     "name": "VariableDeclaration",
-                    "src": "250:14:0"
+                    "src": "520:15:0"
                   }
                 ],
-                "id": 17,
+                "id": 25,
                 "name": "ParameterList",
-                "src": "249:16:0"
+                "src": "519:17:0"
               },
               {
                 "children": [
@@ -361,7 +534,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 58,
+                      "scope": 79,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -374,19 +547,19 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 18,
+                        "id": 26,
                         "name": "ElementaryTypeName",
-                        "src": "290:4:0"
+                        "src": "561:4:0"
                       }
                     ],
-                    "id": 19,
+                    "id": 27,
                     "name": "VariableDeclaration",
-                    "src": "290:4:0"
+                    "src": "561:4:0"
                   }
                 ],
-                "id": 20,
+                "id": 28,
                 "name": "ParameterList",
-                "src": "289:6:0"
+                "src": "560:6:0"
               },
               {
                 "children": [
@@ -440,18 +613,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 154,
+                                      "referencedDeclaration": 172,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 21,
+                                    "id": 29,
                                     "name": "Identifier",
-                                    "src": "310:3:0"
+                                    "src": "581:3:0"
                                   }
                                 ],
-                                "id": 22,
+                                "id": 30,
                                 "name": "MemberAccess",
-                                "src": "310:9:0"
+                                "src": "581:9:0"
                               },
                               {
                                 "attributes": {
@@ -463,14 +636,14 @@
                                   "type": "uint256",
                                   "value": "mostSent"
                                 },
-                                "id": 23,
+                                "id": 31,
                                 "name": "Identifier",
-                                "src": "322:8:0"
+                                "src": "593:8:0"
                               }
                             ],
-                            "id": 24,
+                            "id": 32,
                             "name": "BinaryOperation",
-                            "src": "310:20:0"
+                            "src": "581:20:0"
                           },
                           {
                             "attributes": {
@@ -496,66 +669,27 @@
                                   "lValueRequested": false,
                                   "member_name": "length",
                                   "referencedDeclaration": null,
-                                  "type": "uint256"
+                                  "type": "uint8"
                                 },
                                 "children": [
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "isConstant": false,
-                                      "isLValue": false,
-                                      "isPure": false,
-                                      "isStructConstructorCall": false,
-                                      "lValueRequested": false,
-                                      "names": [
+                                      "overloadedDeclarations": [
                                         null
                                       ],
-                                      "type": "bytes memory",
-                                      "type_conversion": true
+                                      "referencedDeclaration": 24,
+                                      "type": "bytes32",
+                                      "value": "newText"
                                     },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": [
-                                            {
-                                              "typeIdentifier": "t_string_memory_ptr",
-                                              "typeString": "string memory"
-                                            }
-                                          ],
-                                          "isConstant": false,
-                                          "isLValue": false,
-                                          "isPure": true,
-                                          "lValueRequested": false,
-                                          "type": "type(bytes storage pointer)",
-                                          "value": "bytes"
-                                        },
-                                        "id": 25,
-                                        "name": "ElementaryTypeNameExpression",
-                                        "src": "334:5:0"
-                                      },
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 16,
-                                          "type": "string memory",
-                                          "value": "newText"
-                                        },
-                                        "id": 26,
-                                        "name": "Identifier",
-                                        "src": "340:7:0"
-                                      }
-                                    ],
-                                    "id": 27,
-                                    "name": "FunctionCall",
-                                    "src": "334:14:0"
+                                    "id": 33,
+                                    "name": "Identifier",
+                                    "src": "605:7:0"
                                   }
                                 ],
-                                "id": 28,
+                                "id": 34,
                                 "name": "MemberAccess",
-                                "src": "334:21:0"
+                                "src": "605:14:0"
                               },
                               {
                                 "attributes": {
@@ -563,23 +697,23 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 14,
+                                  "referencedDeclaration": 16,
                                   "type": "uint256",
                                   "value": "maxLength"
                                 },
-                                "id": 29,
+                                "id": 35,
                                 "name": "Identifier",
-                                "src": "358:9:0"
+                                "src": "622:9:0"
                               }
                             ],
-                            "id": 30,
+                            "id": 36,
                             "name": "BinaryOperation",
-                            "src": "334:33:0"
+                            "src": "605:26:0"
                           }
                         ],
-                        "id": 31,
+                        "id": 37,
                         "name": "BinaryOperation",
-                        "src": "310:57:0"
+                        "src": "581:50:0"
                       },
                       {
                         "children": [
@@ -593,7 +727,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "operator": "=",
-                                  "type": "string storage ref"
+                                  "type": "bytes32"
                                 },
                                 "children": [
                                   {
@@ -602,13 +736,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7,
-                                      "type": "string storage ref",
+                                      "referencedDeclaration": 9,
+                                      "type": "bytes32",
                                       "value": "currentText"
                                     },
-                                    "id": 32,
+                                    "id": 38,
                                     "name": "Identifier",
-                                    "src": "383:11:0"
+                                    "src": "647:11:0"
                                   },
                                   {
                                     "attributes": {
@@ -616,23 +750,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 16,
-                                      "type": "string memory",
+                                      "referencedDeclaration": 24,
+                                      "type": "bytes32",
                                       "value": "newText"
                                     },
-                                    "id": 33,
+                                    "id": 39,
                                     "name": "Identifier",
-                                    "src": "397:7:0"
+                                    "src": "661:7:0"
                                   }
                                 ],
-                                "id": 34,
+                                "id": 40,
                                 "name": "Assignment",
-                                "src": "383:21:0"
+                                "src": "647:21:0"
                               }
                             ],
-                            "id": 35,
+                            "id": 41,
                             "name": "ExpressionStatement",
-                            "src": "383:21:0"
+                            "src": "647:21:0"
                           },
                           {
                             "children": [
@@ -657,9 +791,9 @@
                                       "type": "uint256",
                                       "value": "mostSent"
                                     },
-                                    "id": 36,
+                                    "id": 42,
                                     "name": "Identifier",
-                                    "src": "418:8:0"
+                                    "src": "682:8:0"
                                   },
                                   {
                                     "attributes": {
@@ -679,32 +813,218 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 154,
+                                          "referencedDeclaration": 172,
                                           "type": "msg",
                                           "value": "msg"
                                         },
-                                        "id": 37,
+                                        "id": 43,
                                         "name": "Identifier",
-                                        "src": "429:3:0"
+                                        "src": "693:3:0"
                                       }
                                     ],
-                                    "id": 38,
+                                    "id": 44,
                                     "name": "MemberAccess",
-                                    "src": "429:9:0"
+                                    "src": "693:9:0"
                                   }
                                 ],
-                                "id": 39,
+                                "id": 45,
                                 "name": "Assignment",
-                                "src": "418:20:0"
+                                "src": "682:20:0"
                               }
                             ],
-                            "id": 40,
+                            "id": 46,
                             "name": "ExpressionStatement",
-                            "src": "418:20:0"
+                            "src": "682:20:0"
                           },
                           {
                             "attributes": {
-                              "functionReturnParameters": 20
+                              "assignments": [
+                                null
+                              ],
+                              "initialValue": null
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "newLoveLock",
+                                  "scope": 79,
+                                  "stateVariable": false,
+                                  "storageLocation": "memory",
+                                  "type": "struct CryptoValentine.LoveLock memory",
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "contractScope": null,
+                                      "name": "LoveLock",
+                                      "referencedDeclaration": 19,
+                                      "type": "struct CryptoValentine.LoveLock storage pointer"
+                                    },
+                                    "id": 47,
+                                    "name": "UserDefinedTypeName",
+                                    "src": "716:8:0"
+                                  }
+                                ],
+                                "id": 48,
+                                "name": "VariableDeclaration",
+                                "src": "716:27:0"
+                              }
+                            ],
+                            "id": 49,
+                            "name": "VariableDeclarationStatement",
+                            "src": "716:27:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "message",
+                                      "referencedDeclaration": 18,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 48,
+                                          "type": "struct CryptoValentine.LoveLock memory",
+                                          "value": "newLoveLock"
+                                        },
+                                        "id": 50,
+                                        "name": "Identifier",
+                                        "src": "757:11:0"
+                                      }
+                                    ],
+                                    "id": 52,
+                                    "name": "MemberAccess",
+                                    "src": "757:19:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 24,
+                                      "type": "bytes32",
+                                      "value": "newText"
+                                    },
+                                    "id": 53,
+                                    "name": "Identifier",
+                                    "src": "779:7:0"
+                                  }
+                                ],
+                                "id": 54,
+                                "name": "Assignment",
+                                "src": "757:29:0"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "ExpressionStatement",
+                            "src": "757:29:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "uint256",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_struct$_LoveLock_$19_memory_ptr",
+                                          "typeString": "struct CryptoValentine.LoveLock memory"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "push",
+                                      "referencedDeclaration": null,
+                                      "type": "function (struct CryptoValentine.LoveLock storage ref) returns (uint256)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 22,
+                                          "type": "struct CryptoValentine.LoveLock storage ref[] storage ref",
+                                          "value": "loveLocks"
+                                        },
+                                        "id": 56,
+                                        "name": "Identifier",
+                                        "src": "800:9:0"
+                                      }
+                                    ],
+                                    "id": 58,
+                                    "name": "MemberAccess",
+                                    "src": "800:14:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 48,
+                                      "type": "struct CryptoValentine.LoveLock memory",
+                                      "value": "newLoveLock"
+                                    },
+                                    "id": 59,
+                                    "name": "Identifier",
+                                    "src": "815:11:0"
+                                  }
+                                ],
+                                "id": 60,
+                                "name": "FunctionCall",
+                                "src": "800:27:0"
+                              }
+                            ],
+                            "id": 61,
+                            "name": "ExpressionStatement",
+                            "src": "800:27:0"
+                          },
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 28
                             },
                             "children": [
                               {
@@ -720,19 +1040,19 @@
                                   "type": "bool",
                                   "value": "true"
                                 },
-                                "id": 41,
+                                "id": 62,
                                 "name": "Literal",
-                                "src": "459:4:0"
+                                "src": "848:4:0"
                               }
                             ],
-                            "id": 42,
+                            "id": 63,
                             "name": "Return",
-                            "src": "452:11:0"
+                            "src": "841:11:0"
                           }
                         ],
-                        "id": 43,
+                        "id": 64,
                         "name": "Block",
-                        "src": "369:105:0"
+                        "src": "633:230:0"
                       },
                       {
                         "children": [
@@ -788,23 +1108,23 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 154,
+                                              "referencedDeclaration": 172,
                                               "type": "msg",
                                               "value": "msg"
                                             },
-                                            "id": 44,
+                                            "id": 65,
                                             "name": "Identifier",
-                                            "src": "494:3:0"
+                                            "src": "883:3:0"
                                           }
                                         ],
-                                        "id": 47,
+                                        "id": 68,
                                         "name": "MemberAccess",
-                                        "src": "494:10:0"
+                                        "src": "883:10:0"
                                       }
                                     ],
-                                    "id": 48,
+                                    "id": 69,
                                     "name": "MemberAccess",
-                                    "src": "494:19:0"
+                                    "src": "883:19:0"
                                   },
                                   {
                                     "attributes": {
@@ -824,32 +1144,32 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 154,
+                                          "referencedDeclaration": 172,
                                           "type": "msg",
                                           "value": "msg"
                                         },
-                                        "id": 49,
+                                        "id": 70,
                                         "name": "Identifier",
-                                        "src": "514:3:0"
+                                        "src": "903:3:0"
                                       }
                                     ],
-                                    "id": 50,
+                                    "id": 71,
                                     "name": "MemberAccess",
-                                    "src": "514:9:0"
+                                    "src": "903:9:0"
                                   }
                                 ],
-                                "id": 51,
+                                "id": 72,
                                 "name": "FunctionCall",
-                                "src": "494:30:0"
+                                "src": "883:30:0"
                               }
                             ],
-                            "id": 52,
+                            "id": 73,
                             "name": "ExpressionStatement",
-                            "src": "494:30:0"
+                            "src": "883:30:0"
                           },
                           {
                             "attributes": {
-                              "functionReturnParameters": 20
+                              "functionReturnParameters": 28
                             },
                             "children": [
                               {
@@ -865,34 +1185,739 @@
                                   "type": "bool",
                                   "value": "false"
                                 },
-                                "id": 53,
+                                "id": 74,
                                 "name": "Literal",
-                                "src": "545:5:0"
+                                "src": "934:5:0"
                               }
                             ],
-                            "id": 54,
+                            "id": 75,
                             "name": "Return",
-                            "src": "538:12:0"
+                            "src": "927:12:0"
                           }
                         ],
-                        "id": 55,
+                        "id": 76,
                         "name": "Block",
-                        "src": "480:81:0"
+                        "src": "869:81:0"
                       }
                     ],
-                    "id": 56,
+                    "id": 77,
                     "name": "IfStatement",
-                    "src": "306:255:0"
+                    "src": "577:373:0"
                   }
                 ],
-                "id": 57,
+                "id": 78,
                 "name": "Block",
-                "src": "296:271:0"
+                "src": "567:389:0"
               }
             ],
-            "id": 58,
+            "id": 79,
             "name": "FunctionDefinition",
-            "src": "233:334:0"
+            "src": "503:453:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getLoveLocks",
+              "payable": false,
+              "scope": 160,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 80,
+                "name": "ParameterList",
+                "src": "984:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 133,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "bytes32[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 81,
+                            "name": "ElementaryTypeName",
+                            "src": "1012:7:0"
+                          }
+                        ],
+                        "id": 82,
+                        "name": "ArrayTypeName",
+                        "src": "1012:9:0"
+                      }
+                    ],
+                    "id": 83,
+                    "name": "VariableDeclaration",
+                    "src": "1012:9:0"
+                  }
+                ],
+                "id": 84,
+                "name": "ParameterList",
+                "src": "1011:11:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        86
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "length",
+                          "scope": 133,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 85,
+                            "name": "ElementaryTypeName",
+                            "src": "1033:4:0"
+                          }
+                        ],
+                        "id": 86,
+                        "name": "VariableDeclaration",
+                        "src": "1033:11:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "length",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 22,
+                              "type": "struct CryptoValentine.LoveLock storage ref[] storage ref",
+                              "value": "loveLocks"
+                            },
+                            "id": 87,
+                            "name": "Identifier",
+                            "src": "1047:9:0"
+                          }
+                        ],
+                        "id": 88,
+                        "name": "MemberAccess",
+                        "src": "1047:16:0"
+                      }
+                    ],
+                    "id": 89,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1033:30:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        93
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "messages",
+                          "scope": 133,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "bytes32[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "bytes32[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "bytes32",
+                                  "type": "bytes32"
+                                },
+                                "id": 91,
+                                "name": "ElementaryTypeName",
+                                "src": "1073:7:0"
+                              }
+                            ],
+                            "id": 92,
+                            "name": "ArrayTypeName",
+                            "src": "1073:9:0"
+                          }
+                        ],
+                        "id": 93,
+                        "name": "VariableDeclaration",
+                        "src": "1073:25:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (bytes32[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "bytes32[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "bytes32",
+                                      "type": "bytes32"
+                                    },
+                                    "id": 94,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1105:7:0"
+                                  }
+                                ],
+                                "id": 95,
+                                "name": "ArrayTypeName",
+                                "src": "1105:9:0"
+                              }
+                            ],
+                            "id": 96,
+                            "name": "NewExpression",
+                            "src": "1101:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 86,
+                              "type": "uint256",
+                              "value": "length"
+                            },
+                            "id": 97,
+                            "name": "Identifier",
+                            "src": "1115:6:0"
+                          }
+                        ],
+                        "id": 98,
+                        "name": "FunctionCall",
+                        "src": "1101:21:0"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1073:49:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "assignments": [
+                            101
+                          ]
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "constant": false,
+                              "name": "i",
+                              "scope": 133,
+                              "stateVariable": false,
+                              "storageLocation": "default",
+                              "type": "uint256",
+                              "value": null,
+                              "visibility": "internal"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 100,
+                                "name": "ElementaryTypeName",
+                                "src": "1138:4:0"
+                              }
+                            ],
+                            "id": 101,
+                            "name": "VariableDeclaration",
+                            "src": "1138:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 102,
+                            "name": "Literal",
+                            "src": "1147:1:0"
+                          }
+                        ],
+                        "id": 103,
+                        "name": "VariableDeclarationStatement",
+                        "src": "1138:10:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 101,
+                              "type": "uint256",
+                              "value": "i"
+                            },
+                            "id": 104,
+                            "name": "Identifier",
+                            "src": "1150:1:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 22,
+                                  "type": "struct CryptoValentine.LoveLock storage ref[] storage ref",
+                                  "value": "loveLocks"
+                                },
+                                "id": 105,
+                                "name": "Identifier",
+                                "src": "1154:9:0"
+                              }
+                            ],
+                            "id": 106,
+                            "name": "MemberAccess",
+                            "src": "1154:16:0"
+                          }
+                        ],
+                        "id": 107,
+                        "name": "BinaryOperation",
+                        "src": "1150:20:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 101,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 108,
+                                "name": "Identifier",
+                                "src": "1172:1:0"
+                              }
+                            ],
+                            "id": 109,
+                            "name": "UnaryOperation",
+                            "src": "1172:3:0"
+                          }
+                        ],
+                        "id": 110,
+                        "name": "ExpressionStatement",
+                        "src": "1172:3:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "assignments": [
+                                null
+                              ],
+                              "initialValue": null
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "currentLoveLock",
+                                  "scope": 133,
+                                  "stateVariable": false,
+                                  "storageLocation": "memory",
+                                  "type": "struct CryptoValentine.LoveLock memory",
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "contractScope": null,
+                                      "name": "LoveLock",
+                                      "referencedDeclaration": 19,
+                                      "type": "struct CryptoValentine.LoveLock storage pointer"
+                                    },
+                                    "id": 111,
+                                    "name": "UserDefinedTypeName",
+                                    "src": "1192:8:0"
+                                  }
+                                ],
+                                "id": 112,
+                                "name": "VariableDeclaration",
+                                "src": "1192:31:0"
+                              }
+                            ],
+                            "id": 113,
+                            "name": "VariableDeclarationStatement",
+                            "src": "1192:31:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "struct CryptoValentine.LoveLock memory"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 112,
+                                      "type": "struct CryptoValentine.LoveLock memory",
+                                      "value": "currentLoveLock"
+                                    },
+                                    "id": 114,
+                                    "name": "Identifier",
+                                    "src": "1237:15:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct CryptoValentine.LoveLock storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 22,
+                                          "type": "struct CryptoValentine.LoveLock storage ref[] storage ref",
+                                          "value": "loveLocks"
+                                        },
+                                        "id": 115,
+                                        "name": "Identifier",
+                                        "src": "1255:9:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 101,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 116,
+                                        "name": "Identifier",
+                                        "src": "1265:1:0"
+                                      }
+                                    ],
+                                    "id": 117,
+                                    "name": "IndexAccess",
+                                    "src": "1255:12:0"
+                                  }
+                                ],
+                                "id": 118,
+                                "name": "Assignment",
+                                "src": "1237:30:0"
+                              }
+                            ],
+                            "id": 119,
+                            "name": "ExpressionStatement",
+                            "src": "1237:30:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 93,
+                                          "type": "bytes32[] memory",
+                                          "value": "messages"
+                                        },
+                                        "id": 120,
+                                        "name": "Identifier",
+                                        "src": "1282:8:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 101,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 121,
+                                        "name": "Identifier",
+                                        "src": "1291:1:0"
+                                      }
+                                    ],
+                                    "id": 122,
+                                    "name": "IndexAccess",
+                                    "src": "1282:11:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "message",
+                                      "referencedDeclaration": 18,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 112,
+                                          "type": "struct CryptoValentine.LoveLock memory",
+                                          "value": "currentLoveLock"
+                                        },
+                                        "id": 123,
+                                        "name": "Identifier",
+                                        "src": "1296:15:0"
+                                      }
+                                    ],
+                                    "id": 124,
+                                    "name": "MemberAccess",
+                                    "src": "1296:23:0"
+                                  }
+                                ],
+                                "id": 125,
+                                "name": "Assignment",
+                                "src": "1282:37:0"
+                              }
+                            ],
+                            "id": 126,
+                            "name": "ExpressionStatement",
+                            "src": "1282:37:0"
+                          }
+                        ],
+                        "id": 127,
+                        "name": "Block",
+                        "src": "1177:153:0"
+                      }
+                    ],
+                    "id": 128,
+                    "name": "ForStatement",
+                    "src": "1133:197:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 84
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bytes32[] memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 93,
+                              "type": "bytes32[] memory",
+                              "value": "messages"
+                            },
+                            "id": 129,
+                            "name": "Identifier",
+                            "src": "1347:8:0"
+                          }
+                        ],
+                        "id": 130,
+                        "name": "TupleExpression",
+                        "src": "1346:10:0"
+                      }
+                    ],
+                    "id": 131,
+                    "name": "Return",
+                    "src": "1339:17:0"
+                  }
+                ],
+                "id": 132,
+                "name": "Block",
+                "src": "1023:341:0"
+              }
+            ],
+            "id": 133,
+            "name": "FunctionDefinition",
+            "src": "963:401:0"
           },
           {
             "attributes": {
@@ -904,7 +1929,7 @@
               ],
               "name": "withdrawEther",
               "payable": false,
-              "scope": 85,
+              "scope": 160,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -917,9 +1942,9 @@
                   ]
                 },
                 "children": [],
-                "id": 59,
+                "id": 134,
                 "name": "ParameterList",
-                "src": "595:2:0"
+                "src": "1392:2:0"
               },
               {
                 "attributes": {
@@ -928,9 +1953,9 @@
                   ]
                 },
                 "children": [],
-                "id": 60,
+                "id": 135,
                 "name": "ParameterList",
-                "src": "607:0:0"
+                "src": "1404:0:0"
               },
               {
                 "children": [
@@ -962,13 +1987,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 157,
+                              "referencedDeclaration": 175,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
-                            "id": 61,
+                            "id": 136,
                             "name": "Identifier",
-                            "src": "617:7:0"
+                            "src": "1414:7:0"
                           },
                           {
                             "attributes": {
@@ -1003,18 +2028,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 154,
+                                      "referencedDeclaration": 172,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 62,
+                                    "id": 137,
                                     "name": "Identifier",
-                                    "src": "625:3:0"
+                                    "src": "1422:3:0"
                                   }
                                 ],
-                                "id": 63,
+                                "id": 138,
                                 "name": "MemberAccess",
-                                "src": "625:10:0"
+                                "src": "1422:10:0"
                               },
                               {
                                 "attributes": {
@@ -1022,28 +2047,28 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11,
+                                  "referencedDeclaration": 13,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 64,
+                                "id": 139,
                                 "name": "Identifier",
-                                "src": "639:5:0"
+                                "src": "1436:5:0"
                               }
                             ],
-                            "id": 65,
+                            "id": 140,
                             "name": "BinaryOperation",
-                            "src": "625:19:0"
+                            "src": "1422:19:0"
                           }
                         ],
-                        "id": 66,
+                        "id": 141,
                         "name": "FunctionCall",
-                        "src": "617:28:0"
+                        "src": "1414:28:0"
                       }
                     ],
-                    "id": 67,
+                    "id": 142,
                     "name": "ExpressionStatement",
-                    "src": "617:28:0"
+                    "src": "1414:28:0"
                   },
                   {
                     "children": [
@@ -1085,18 +2110,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 11,
+                                  "referencedDeclaration": 13,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 68,
+                                "id": 143,
                                 "name": "Identifier",
-                                "src": "655:5:0"
+                                "src": "1452:5:0"
                               }
                             ],
-                            "id": 70,
+                            "id": 145,
                             "name": "MemberAccess",
-                            "src": "655:14:0"
+                            "src": "1452:14:0"
                           },
                           {
                             "attributes": {
@@ -1116,38 +2141,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 165,
+                                  "referencedDeclaration": 183,
                                   "type": "contract CryptoValentine",
                                   "value": "this"
                                 },
-                                "id": 71,
+                                "id": 146,
                                 "name": "Identifier",
-                                "src": "670:4:0"
+                                "src": "1467:4:0"
                               }
                             ],
-                            "id": 72,
+                            "id": 147,
                             "name": "MemberAccess",
-                            "src": "670:12:0"
+                            "src": "1467:12:0"
                           }
                         ],
-                        "id": 73,
+                        "id": 148,
                         "name": "FunctionCall",
-                        "src": "655:28:0"
+                        "src": "1452:28:0"
                       }
                     ],
-                    "id": 74,
+                    "id": 149,
                     "name": "ExpressionStatement",
-                    "src": "655:28:0"
+                    "src": "1452:28:0"
                   }
                 ],
-                "id": 75,
+                "id": 150,
                 "name": "Block",
-                "src": "607:83:0"
+                "src": "1404:83:0"
               }
             ],
-            "id": 76,
+            "id": 151,
             "name": "FunctionDefinition",
-            "src": "573:117:0"
+            "src": "1370:117:0"
           },
           {
             "attributes": {
@@ -1159,7 +2184,7 @@
               ],
               "name": "",
               "payable": true,
-              "scope": 85,
+              "scope": 160,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
@@ -1172,9 +2197,9 @@
                   ]
                 },
                 "children": [],
-                "id": 77,
+                "id": 152,
                 "name": "ParameterList",
-                "src": "705:2:0"
+                "src": "1502:2:0"
               },
               {
                 "attributes": {
@@ -1183,9 +2208,9 @@
                   ]
                 },
                 "children": [],
-                "id": 78,
+                "id": 153,
                 "name": "ParameterList",
-                "src": "722:0:0"
+                "src": "1520:0:0"
               },
               {
                 "children": [
@@ -1217,13 +2242,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 58,
-                              "type": "function (string memory) returns (bool)",
+                              "referencedDeclaration": 79,
+                              "type": "function (bytes32) returns (bool)",
                               "value": "setText"
                             },
-                            "id": 79,
+                            "id": 154,
                             "name": "Identifier",
-                            "src": "732:7:0"
+                            "src": "1530:7:0"
                           },
                           {
                             "attributes": {
@@ -1238,39 +2263,39 @@
                               "type": "literal_string \"Default text!\"",
                               "value": "Default text!"
                             },
-                            "id": 80,
+                            "id": 155,
                             "name": "Literal",
-                            "src": "740:15:0"
+                            "src": "1538:15:0"
                           }
                         ],
-                        "id": 81,
+                        "id": 156,
                         "name": "FunctionCall",
-                        "src": "732:24:0"
+                        "src": "1530:24:0"
                       }
                     ],
-                    "id": 82,
+                    "id": 157,
                     "name": "ExpressionStatement",
-                    "src": "732:24:0"
+                    "src": "1530:24:0"
                   }
                 ],
-                "id": 83,
+                "id": 158,
                 "name": "Block",
-                "src": "722:41:0"
+                "src": "1520:41:0"
               }
             ],
-            "id": 84,
+            "id": 159,
             "name": "FunctionDefinition",
-            "src": "696:67:0"
+            "src": "1493:68:0"
           }
         ],
-        "id": 85,
+        "id": 160,
         "name": "ContractDefinition",
-        "src": "26:740:0"
+        "src": "26:1538:0"
       }
     ],
-    "id": 86,
+    "id": 161,
     "name": "SourceUnit",
-    "src": "0:767:0"
+    "src": "0:1565:0"
   },
   "compiler": {
     "name": "solc",
@@ -1280,9 +2305,27 @@
     "5777": {
       "events": {},
       "links": {},
+<<<<<<< HEAD
+      "address": "0x2c2b9c9a4a25e24b174f26114e8926a9f2128fe4"
+    },
+    "1518530315417": {
+      "events": {},
+      "links": {},
+      "address": "0xc9bf5694377d00598dd5c3af0baeef020ba18e3a"
+    },
+    "1518531092605": {
+      "events": {},
+      "links": {},
+      "address": "0xa8b39a762c12cc79fda6de2c3358cde35da02747"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-13T17:14:15.300Z"
+=======
       "address": "0xf204a4ef082f5c04bb89f7d5e6568b796096735a"
     }
   },
   "schemaVersion": "1.0.1",
   "updatedAt": "2018-02-13T19:43:58.100Z"
+>>>>>>> upstream/master
 }

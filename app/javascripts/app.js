@@ -1,6 +1,5 @@
 // Import the page's CSS. Webpack will know what to do with it.
 import '../stylesheets/app.css'
-
 import 'bootstrap/dist/css/bootstrap.css'
 
 // Import libraries we need.
@@ -26,7 +25,7 @@ var account
 window.App = {
   start: function () {
     var self = this
-
+    console.log("app.js started");
     // Bootstrap the MetaCoin abstraction for Use.
     CryptoValentine.setProvider(web3.currentProvider)
 
@@ -45,10 +44,12 @@ window.App = {
       accounts = accs
       account = accounts[0]
 
-      App.sendMessage()
+      //App.sendMessage()
+      App.getNumberOfLocks();
+      App.getLocks();
+
     })
   },
-
   sendMessage: function () {
     var _message = document.getElementById('message').value
 
@@ -65,10 +66,43 @@ window.App = {
       console.error(err)
     })
   },
+  getNumberOfLocks: function ()  {
+    CryptoValentine.deployed().then(function (instance) {
+      console.log("haha");
+      console.log(instance.getNumberOfLoveLocks());
+    })
+  },
+  getLocks: function () {
+    CryptoValentine.deployed().then(function (instance) {
+      console.log("test")
+      console.log(instance.getLoveLocks())
+      /*let messages = instance.getLoveLocks();
+      messages.map((item,index)=>{
+        messages[index] = cleanStr(web3.toAscii(item));
+      })
+      return messages;*/
 
+      return instance.getLoveLocks()
+      /*
+      instance.getLoveLocks().then((data)=>{
+        let messages = data[0];
+        console.log(messages)
+      })*/
+    }).then(function (result) {
+      console.log(result)
+    }).catch(function (err) {
+      console.error(err)
+    })
+  },
   sendCoin: function () {
     var self = this
-  }
+  }/*,
+  render() {
+  
+    return (
+        <h1> TEstsdftsdtftsdftsdftsdttfds </h1>  
+    );
+  }*/
 }
 
 window.addEventListener('load', function () {
@@ -85,3 +119,5 @@ window.addEventListener('load', function () {
 
   App.start()
 })
+
+
